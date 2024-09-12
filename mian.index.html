@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Italiano Pizza</title>
+
+    <link rel="stylesheet" href="main.css" >
+    <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/77b447a4d4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <div class="menu-box">
+        <h1 class="shop-name">Sicily Pizza</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="#Etusivu" class="active">Etusivu</a></li>
+                <li><a href="#Ruokalistat">Ruokalistat</a></li>
+                <li><a href="#Yhteystiedot">Yhteystiedot</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            
+            <button id="show-dialog"><i class="fa-solid fa-right-to-bracket"></i></button>
+        </div>
+    </div>
+    <section id="front-image"></section>
+    
+    
+</header>
+
+<main>
+   
+    <dialog id="register-dialog">
+        <div class="form-container"></div>    
+        <form method="dialog">
+            <fieldset>
+                <legend>Registeröidy</legend>
+                <img src="img/form.jpeg" alt="valokuva-sisältö">
+
+                <label for="nimi">Anna Käyttäjätunnuts:</label>
+                <input 
+                type="text"
+                name="nimi"
+                id="nimi"
+                placeholder="Any name"
+                minlength="3"
+                maxlength="15"
+                title="Anna Käyttäjätunnuts min3, max15"
+                required
+                >
+
+                <label for="säposti">Anna Sähköposti:</label>
+                <input type="email" name="säposti" id="säposti" placeholder="@metropolia.fi" required>
+
+                <label for="salsana">Anna Salasana:</label>
+                <input type="password" name="salsana" id="salsana" required >
+                
+
+                <input type="submit" value="Submit" >
+                <button type="button" id="close-dialog">Sulje</button>
+            </fieldset>
+        </form>
+        
+    </dialog>
+    
+    <div class="soon">
+    <h2>Soon you will hear from us!</h2>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="text-content">
+            <h2>Sicily Pizza</h2>
+            <h3>Lisää Meistä</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores odio at labore? At, quos sapiente corrupti ducimus harum sit nobis voluptatum illum porro fuga. Sequi magni sunt doloribus suscipit debitis.
+            Nihil odit minus quam aperiam cupiditate quos facilis ea laboriosam voluptas, quidem quia inventore blanditiis tempora ab quis tempore, sunt deleniti esse obcaecati suscipit molestiae nostrum. Eos fuga aliquid tempora!</p>
+        </div>
+        <img src="img/piz.jpg" alt="pizza-sample">
+
+        <div class="image-wrapper">
+            
+            <img src="img/chil.jpg" alt="chili" class="floating-img">
+        </div>    
+    </div>
+    <div class="footer-gap"></div>
+    <div class="footer-copyright">
+        <p> Copyright, Husu</p>
+    </div>
+</footer>
+
+
+</body>
+</html>
