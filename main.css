@@ -3,7 +3,13 @@
  }
 
  
- 
+ @font-face {
+    font-family: 'MyCustomFont';
+    src: url(/fonts/Roboto-Regular.ttf) format('woff2'),
+         url(/fonts/Roboto-Thin.ttf) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
  /* General Styles */
  body {
     font-family: Arial, sans-serif;
@@ -19,7 +25,10 @@
 body:has(dialog[open]) {
     overflow-y: hidden;
 }
-
+body.dark-mode {
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
 /* Header & Menu Styles */
 header {
     
@@ -28,6 +37,48 @@ header {
     box-shadow: 0 4px 2px -2px gray;
 
 }
+body.dark-mode header {
+    background-color: #000000; /* Dark mode header */
+}
+
+.dark-mode {
+    background-color: #000000;
+    color: #f8f8f8;
+    margin-right: auto;
+}
+
+/* button #toggleButton{
+    padding: 0;
+    font-size: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    background-color: none;
+    outline: none;
+    border-style: outset;
+    display: inline-block;
+    
+   
+ 
+} */
+ #toggleButton{
+    border-radius: 30px;
+    border: 30px;
+    cursor: pointer;
+   
+    
+ }
+
+.toggle-icon {
+    color: rgb(15, 14, 14);
+    font-size: 25px;
+    
+}
+
+body.dark-mode .toggle-icon {
+    color: #090a08;
+}
+
 
 .menu-box {
     /* max-width: 1200px; */
@@ -44,6 +95,7 @@ header {
     font-size: 24px;
     color: #d4a03c;
     font-weight: bold;
+    padding-left: 160px;
     
 }
 
@@ -53,7 +105,7 @@ nav ul.menu {
     display: flex;
     gap: 81px;
     text-align: justify;
-    padding: 0px 123px 0px 139px 
+    padding: 0px 123px 0px 139px ;
 }
 
 nav ul.menu li {
@@ -77,6 +129,7 @@ nav ul.menu li a:hover {
     display: flex;
     align-items: center;
     gap: 5px;
+    padding-right: 170px;
 }
 
 .search-box input[type='text'] {
@@ -101,7 +154,12 @@ nav ul.menu li a:hover {
 }
 button #close-dialog {
     margin-left: 90px;
+   
     
+}
+#close-dialog {
+    display: flex;
+    margin: auto;
 }
 
 /* Main Content Styles */
@@ -126,8 +184,55 @@ main {
     background-size: cover;
     border-bottom-left-radius: 20%;
     border-bottom-right-radius: 123px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;      
+    position: relative;      
 
 }
+.day-food {
+    color: white;
+    max-width: 40%;
+    margin-right: 650px;
+}
+.day-food h5{
+   
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 12.5em;
+    margin: 0;
+    margin-top: 12.5rem;
+    
+}
+
+.day-food p {
+    font-size: 16px;
+    margin-top: 1em;
+    color: white;
+
+}
+
+.day-button {
+    display: inline-block;
+    margin-top: 1.5em;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #ffa500; /* Button background color */
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(255, 165, 0, 0.5); /* Glowing effect */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for button */
+.day-button:hover {
+    box-shadow: 0 6px 20px rgba(255, 165, 0, 0.8); /* Stronger glow */
+    transform: translateY(-3px); /* Lift button up */
+}
+
 
 /* Grid System for Responsiveness */
 [class*="col-"] {
@@ -231,6 +336,11 @@ label, input{
     display: flex;
     align-items: center;
     
+}
+#register-dialog {
+    background-color: #dddfb5;
+    border: none;
+    border-radius: 20px;
 }
 /* .grid-container {
 background-color: #eaedc5;
@@ -461,6 +571,7 @@ padding: 20px;
         width: 100%;
         height: 50vh;
     }
+    
 
     header {
         padding: 10px;
@@ -560,3 +671,6 @@ footer {
     font-size: 14px;
 }
 
+body.dark-mode .menu-box, body.dark-mode .footer-content {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark mode */
+}
