@@ -5,11 +5,11 @@
  
  @font-face {
     font-family: 'MyFont';
-    src: url(/fonts/OpenSans-Light.ttf) format('woff2'),
-         url(/fonts/Roboto-Black.ttf) format('woff'),
-         url(/fonts/OpenSans-Medium.ttf) format('woff'),
-         url(/fonts/Roboto-Regular.ttf) format('woff'),
-         url(/fonts/OpenSans_SemiCondensed-Medium.ttf) format('woff');
+    src: url(./fonts/OpenSans-Light.ttf) format('woff2'),
+         url(./fonts/Roboto-Black.ttf) format('woff'),
+         url(./fonts/OpenSans-Medium.ttf) format('woff'),
+         url(./fonts/Roboto-Regular.ttf) format('woff'),
+         url(./fonts/OpenSans_SemiCondensed-Medium.ttf) format('woff');
     font-weight: normal;
     font-style: normal;
 }
